@@ -1,0 +1,12 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "- It's JavaScript RunTimeEnvironment.",
+  "main": "fileSystem.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kunal Khandekar",
+  "license": "ISC"
+}
