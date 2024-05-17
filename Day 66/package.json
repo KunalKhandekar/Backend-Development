@@ -1,0 +1,17 @@
+{
+  "name": "day-66",
+  "version": "1.0.0",
+  "description": "Why to use Express Library ?\r  - Makes the code look clean and maintainable\r  - Writing code in HTTP is very painful. Express Makes it easy.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kunal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12"
+  }
+}
