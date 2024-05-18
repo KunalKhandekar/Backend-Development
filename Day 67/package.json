@@ -1,0 +1,15 @@
+{
+  "name": "day-67",
+  "version": "1.0.0",
+  "description": "What is middleware ?\r  - It's a function which runs on every requestt and response between client and server.\r  - It has acccess to req, res and next miidleware function.\r  - There can be multiple middleware in a code.\r  - We can make changes to the req and res object.\r  - Call next() after doing the neccesary task.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
