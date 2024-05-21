@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Maker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-900">
+    <div class="p-5">
+      <h1 class="text-3xl text-white font-medium capitalized">Note Maker</h1>
+
+      <form method="post" action="/create" class="py-3">
+        <input
+          type="text"
+          placeholder="Title"
+          class="w-full py-2 pl-4 text-lg text-white bg-zinc-800 rounded-lg focus:outline-none"
+          name="title"
+          required
+        />
+        <textarea
+          name="details"
+          placeholder="Description"
+          class="w-full py-2 pl-4 text-lg text-white bg-zinc-800 rounded-lg focus:outline-none mt-3 resize-none h-[120px]"
+          required
+        ></textarea>
+        <button
+          class="px-6 py-1.5 mt-3 rounded-lg text-white bg-green-500 font-semibold"
+        >
+          Create Note
+        </button>
+      </form>
+
+      <div class="w-full mt-3 flex gap-2 flex-wrap">
+        <% if (notes.length >= 1) { %> <% notes.map(note => { %>
+        <div
+          class="p-3 rounded-lg text-white bg-zinc-800 w-[300px] relative"
+        >
+          <a class="absolute top-2 right-2 text-red-800 font-medium text-xl" href="/delete/<%= note.id %>">X</a>
+          <h1 class="truncate line-clamp-1 text-2xl pb-2 font-semibold">
+            <%= note.title  %>
+          </h1>
+          <p class="text-base text-blue-500 flex justify-between">
+            <a href='/show/<%= note.id %>'>Read More...</a>
+            <a href='/edit/<%= note.id %>' class="text-zinc-500 font-medium">Edit name</a>
+          </p>
+        </div>
+        <% }) %> <%} else { %>
+        <div class="text-xl font-medium text-zinc-500">
+          Notes not created yett !!
+        </div>
+        <% }%>
+      </div>
+    </div>
+  </body>
+</html>
