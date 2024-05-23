@@ -1,4 +1,5 @@
 const { REST, Routes } =  require('discord.js');
+// 'MTI0MzI5MzMyMjYzODkyMTc4OQ.GMzBX0.rNR53Ej9jegRft4aRnBa7_gKAdfsIF5L3AxOH4'
 
 const commands = [
   {
@@ -7,7 +8,7 @@ const commands = [
   },
 ];
 
-const rest = new REST({ version: '10' }).setToken('MTI0MzI5MzMyMjYzODkyMTc4OQ.GMzBX0.rNR53Ej9jegRft4aRnBa7_gKAdfsIF5L3AxOH4');
+const rest = new REST({ version: '10' }).setToken(token);
 
 (async () => {
     try {
