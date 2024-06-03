@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <%= JSON.stringify(user) %>
+    <%- include('./partials/scripts') %>
+
+    <% if (!locals.user) { %>
+        <h1>Try Sign IN or Sign UP</h1>
+    <% } %>
+</body>
+</html>
